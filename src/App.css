@@ -1,5 +1,23 @@
-.App {
-  text-align: center;
+
+
+.title{
+  
+  color:#fc8403;
+  background-color:#34c9eb;
+  border-radius: 10px;
+  
+
+}
+.image{
+  border-radius: 20px;
+}
+.description{
+  background-color:#fc8403;
+  font-weight: 500;
+  border-radius: 20px;
+}
+.image{
+  border-radius: 20px;
 }
 
 
