@@ -2,10 +2,11 @@ import React from 'react'
 
 
 const RecipeCart = ({ recipe }) => {
+    const splitIng = recipe.ingredients.split(",");
 
     return (
-        <div className="first row d-flex justify-content-center">
-            <div className="title  col-md-4 mt-3">
+        <div className="first row ">
+            <div className="title  col-md-12 mt-3 d-flex justify-content-center">
                 <h1 >{recipe.title}</h1>
             </div>
             <div className="second row">
@@ -13,19 +14,21 @@ const RecipeCart = ({ recipe }) => {
                     {recipe.description}
                 </p>
             </div>
-            <div className="third row">
-                <div className="ing col-md-4 d-flex justify-content-center pt-2">
-                    <div>
+            <div className="third row ">
+                <div className="ing col-md-4 d-flex justify-content-center mt-5">
+                    <div className="Ing col-md-6">
                         Ingredients
+
                     </div>
                     <ul>
-                        {/* {recipe.ingred.map(ing => <li>{ing}</li>)} */}
+
+                        {splitIng.map(ingredient => <li>{ingredient}</li>)}
                     </ul>
                 </div>
-                <div className=' col-md-8 m col-sm-4 col-xs-12'>
-                    <div className="row justify-content-center">
-                        <div className='col-md-4'>
-                            {/* <img className="image " src={recipe.fields.images.fields.file.url + '?w=450&h=450'} alt={recipe.fields.title} /> */}
+                <div className=' col-md-8  col-sm-4 col-xs-12'>
+                    <div className="row ml-5 justify-content-center ">
+                        <div className='col-md-4 '>
+                            <img className="image " src={recipe.imgurl + '?w=300&h=300'} alt='recipe' />
                         </div>
                     </div>
                 </div>
